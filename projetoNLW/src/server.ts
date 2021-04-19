@@ -12,7 +12,11 @@ const app = express();
  */
 
 app.get("/", (request, response) => {
-  return response.send("Olá IURI!!!")
+  return response.json({ message: "Olá IURI!!!" })
+})
+
+app.post("/users", (request, response) => {
+  return response.json({ message: "Usuário salvo com sucesso!" })
 })
 
 app.listen(3333, () => console.log("Server running in port 3333"));
